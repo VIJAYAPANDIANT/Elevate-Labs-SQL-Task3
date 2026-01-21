@@ -67,17 +67,3 @@ FROM students;
 8️--Email search
 SELECT * FROM students
 WHERE email LIKE '%@gmail.com';
-
-
-SELECT * FROM students
-WHERE email LIKE '%@gmail.com';
-
-
-
-
-
-
-
-
-
-
