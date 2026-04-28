@@ -1,32 +1,43 @@
-# SQL Task 3: Student Database Management
+# Elevate Lab Internship - Task 3
 
-This project demonstrates basic and intermediate SQL queries using a `students` database. It covers table creation, data insertion, filtering, logical operators, pattern matching, and more.
+## 📌 Project Overview
+This repository contains the SQL scripts for Task 3 of the Elevate Lab Internship. The project focuses on foundational and intermediate SQL concepts, including database creation, table management, data insertion, and data retrieval using various filtering techniques, logical operators, and pattern matching within a `students` database.
 
-## Database Schema
+## 🛠️ Tech Stack
+- **Database:** MySQL
+- **Language:** SQL
 
-### `students` Table
-- `id`: Primary Key, Auto-increment
-- `name`: Student name (VARCHAR)
-- `age`: Student age (INT)
-- `email`: Student email address (VARCHAR)
-- `department`: Student department (VARCHAR)
+## ⚙️ Core Concepts Covered
+1. **Filtering Data:** Utilizing the `WHERE` clause for precise data extraction.
+2. **Logical Operators:** Applying `AND` & `OR` for complex filtering conditions.
+3. **Pattern Matching:** Implementing the `LIKE` operator with wildcards (`%`).
+4. **Range & Set Filtering:** Using `IN` and `BETWEEN` operators efficiently.
+5. **Null Handling:** Filtering records with missing data using `IS NULL`.
+6. **Query Execution Flow:** Understanding execution order with `SELECT`, `FROM`, `WHERE`, and `ORDER BY`.
+7. **Column Aliasing:** Using `AS` to rename columns for enhanced readability.
 
-## SQL Queries Included
+## 🗄️ Database Schema (`students` table)
+| Column Name  | Data Type    | Description                           |
+| ------------ | ------------ | ------------------------------------- |
+| `id`         | `INT`        | Primary Key, Auto-increment           |
+| `name`       | `VARCHAR(50)`| Student's name                        |
+| `age`        | `INT`        | Student's age                         |
+| `email`      | `VARCHAR(100)`| Student's email address              |
+| `department` | `VARCHAR(50)`| Department of the student             |
 
-The following SQL concepts are demonstrated in `task 3.sql`:
+## 🚀 How to Run
+1. Open your MySQL environment (e.g., MySQL Workbench, command line).
+2. Execute the `task 3.sql` script to create the database (`task3`) and the `students` table.
+3. The script will insert sample student records automatically.
+4. Run the subsequent query blocks in the script to observe the results of different SQL operations.
 
-1.  **Filtering with `WHERE`**: Selecting students based on age.
-2.  **Logical Operators (`AND`, `OR`)**: Combining conditions for more specific filters.
-3.  **Pattern Matching (`LIKE`)**: Using wildcards (`%`) to find names or emails.
-4.  **`IN` and `BETWEEN`**: Efficiently filtering ranges and sets of values.
-5.  **Handling Nulls (`IS NULL`)**: Identifying records with missing information.
-6.  **Query Execution Order**: Demonstrating `SELECT`, `FROM`, `WHERE`, and `ORDER BY`.
-7.  **Aliases (`AS`)**: Renaming columns in query results for better readability.
-8.  **Email Search**: Specifically filtering for Gmail addresses.
+---
 
-## How to Run
+> [!TIP]
+> You can execute the different `SELECT` queries individually to observe how the `WHERE`, `LIKE`, and logical operators filter the result set differently.
 
-1.  Execute the script `task 3.sql` in your MySQL environment.
-2.  The script will automatically create the `task3` database and the `students` table.
-3.  Initial data for five students will be inserted.
-4.  Run the provided queries to see the results of various filtering and sorting techniques.
+---
+
+<div align="center">
+  Submitted by: <b>Vijayapandian T</b> | Elevate Labs SQL Internship Task 3
+</div>
