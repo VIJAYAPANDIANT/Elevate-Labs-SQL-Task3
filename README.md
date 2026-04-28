@@ -1,35 +1,66 @@
-# Elevate Lab Internship - Task 3
+# 📊 Elevate Labs - SQL Task 3
+Welcome to SQL Task 3 of my Elevate Labs internship! This project demonstrates basic and intermediate SQL queries, focusing on data retrieval, filtering, logical operators, and pattern matching.
 
-## 📌 Project Overview
-This repository contains the SQL scripts for Task 3 of the Elevate Lab Internship. The project focuses on foundational and intermediate SQL concepts, including database creation, table management, data insertion, and data retrieval using various filtering techniques, logical operators, and pattern matching within a `students` database.
+## 🎯 Task Objective
+The primary goal of this task is to:
+- **Filter Data:** Use `WHERE` to retrieve specific records.
+- **Logical Operations:** Combine conditions using `AND` and `OR`.
+- **Pattern Matching:** Search for specific text patterns using `LIKE`.
+- **Range & Set Filtering:** Efficiently query data using `IN` and `BETWEEN`.
+- **Handle Nulls:** Identify missing values using `IS NULL`.
 
-## 🛠️ Tech Stack
-- **Database:** MySQL
-- **Language:** SQL
+## 🛠️ Prerequisites
+To successfully run the scripts in this project, ensure you have the following:
+- **SQL Server:** MySQL, MariaDB, or any compatible SQL engine.
+- **SQL Client:** A command-line interface (CLI) or a graphical tool like MySQL Workbench.
 
-## ⚙️ Core Concepts Covered
-1. **Filtering Data:** Utilizing the `WHERE` clause for precise data extraction.
-2. **Logical Operators:** Applying `AND` & `OR` for complex filtering conditions.
-3. **Pattern Matching:** Implementing the `LIKE` operator with wildcards (`%`).
-4. **Range & Set Filtering:** Using `IN` and `BETWEEN` operators efficiently.
-5. **Null Handling:** Filtering records with missing data using `IS NULL`.
-6. **Query Execution Flow:** Understanding execution order with `SELECT`, `FROM`, `WHERE`, and `ORDER BY`.
-7. **Column Aliasing:** Using `AS` to rename columns for enhanced readability.
+## 🏗️ Database Schema
+The project uses a `students` table to demonstrate data querying techniques.
 
-## 🗄️ Database Schema (`students` table)
-| Column Name  | Data Type    | Description                           |
-| ------------ | ------------ | ------------------------------------- |
-| `id`         | `INT`        | Primary Key, Auto-increment           |
-| `name`       | `VARCHAR(50)`| Student's name                        |
-| `age`        | `INT`        | Student's age                         |
-| `email`      | `VARCHAR(100)`| Student's email address              |
-| `department` | `VARCHAR(50)`| Department of the student             |
+### `students` Table Structure
+| Column Name | Data Type | Description |
+| :--- | :--- | :--- |
+| 🔑 `id` | `INT` | Primary Key, Auto-increment |
+| 👤 `name` | `VARCHAR(50)` | Full name of the student |
+| 🔢 `age` | `INT` | Student's age |
+| 📧 `email` | `VARCHAR(100)` | Student's email address |
+| 🏢 `department` | `VARCHAR(50)` | Department of the student |
 
-## 🚀 How to Run
-1. Open your MySQL environment (e.g., MySQL Workbench, command line).
-2. Execute the `task 3.sql` script to create the database (`task3`) and the `students` table.
-3. The script will insert sample student records automatically.
-4. Run the subsequent query blocks in the script to observe the results of different SQL operations.
+## 📖 How to Use
+Follow these steps to initialize and test the database:
+1. **Start Server:** Ensure your SQL server instance is running.
+2. **Connect:** Use your preferred SQL client to connect to the server.
+3. **Execute Script:** Open and run the `task 3.sql` file.
+   ```sql
+   source path/to/task 3.sql;
+   ```
+4. **Verify:** Check the output to observe the results of different SQL query operations.
+
+## 🔍 Key Operations Included
+The `task 3.sql` script includes several essential SQL operations:
+
+### 1. Filtering with WHERE
+```sql
+SELECT * FROM students WHERE age > 20;
+```
+
+### 2. Logical Operators (AND / OR)
+```sql
+SELECT * FROM students WHERE age > 20 AND department = 'CSE';
+SELECT * FROM students WHERE department = 'IT' OR department = 'MECH';
+```
+
+### 3. Pattern Matching (LIKE)
+```sql
+SELECT * FROM students WHERE name LIKE 'A%';
+SELECT * FROM students WHERE email LIKE '%gmail%';
+```
+
+### 4. IN and BETWEEN Operators
+```sql
+SELECT * FROM students WHERE department IN ('CSE', 'IT');
+SELECT * FROM students WHERE age BETWEEN 20 AND 22;
+```
 
 ---
 
